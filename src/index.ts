@@ -23,8 +23,12 @@ const app = express();
 
 // App Configuration
 
+const corsOptions = {
+  origin: true,
+}
+
 app.use(helmet());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/api', ApiRouter);
