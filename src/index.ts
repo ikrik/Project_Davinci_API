@@ -24,8 +24,9 @@ const app = express();
 // App Configuration
 
 const corsOptions = {
-  origin: true,
-}
+  origin: ['https://project-davinci.herokuapp.com/', 'http://localhost:3000'],
+  credentials: false
+};
 
 app.use(helmet());
 app.use(cors(corsOptions));
