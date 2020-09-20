@@ -7,6 +7,9 @@ module.exports = {
   entry: ['./src/index.ts'],
   watch: false,
   target: 'node',
+  externals: [
+    nodeExternals()
+  ],
   module: {
     rules: [
       {
