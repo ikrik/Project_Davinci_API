@@ -1,5 +1,7 @@
-import TestParis from "../../data/TestParis/testParis";
+import TestParis from '../../data/TestParis/testParis';
 import CommunesParis from '../../data/CommunesParis/communesParis';
+import Departments from '../../data/Departments/departments';
+import France from '../../data/Country/france';
 
 
 export const getTestParis = async (): Promise<any> => {
@@ -19,3 +21,21 @@ export const getCommunesParis = async (): Promise<any> => {
     resolve(CommunesParis);
   });
 };
+
+export const getDepartments = async (): Promise<any> => {
+  return new Promise((resolve, reject) => {
+    if (!Departments) {
+      reject('No data found');
+    }
+    resolve(Departments);
+  });
+}
+
+export const getCountry = async (): Promise<any> => {
+  return new Promise((resolve, reject) => {
+    if (!France) {
+      reject('No data found');
+    }
+    resolve(France);
+  });
+}
