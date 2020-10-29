@@ -1,15 +1,15 @@
-import TestParis from '../../data/TestParis/testParis';
+import ParisPoints from '../../data/ParisPoints/parisPoints';
 import CommunesParis from '../../data/CommunesParis/communesParis';
 import Departments from '../../data/Departments/departments';
 import France from '../../data/Country/france';
 
 
-export const getTestParis = async (): Promise<any> => {
+export const getParisPoints = async (): Promise<any> => {
   return new Promise((resolve, reject) => {
-    if (!TestParis) {
+    if (!ParisPoints) {
       reject('No data found');
     }
-    resolve(TestParis);
+    resolve(ParisPoints);
   });
 };
 
