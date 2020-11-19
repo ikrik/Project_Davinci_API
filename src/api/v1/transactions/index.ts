@@ -3,7 +3,7 @@ import PointsRouter from './rectangle'
 
 const TransactionsRouter = express.Router();
 
-TransactionsRouter.use('/rectange', PointsRouter);
+TransactionsRouter.use('/rectangle', PointsRouter);
 
 TransactionsRouter.use('/', (req: Request, res: Response) => {
   res.redirect('/api/v1/transactions/rectangle');
