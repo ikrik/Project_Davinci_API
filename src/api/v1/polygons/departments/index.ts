@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import * as DataService from '../../../services/data.services';
+import * as DataService from '../../../../services/data.services';
 
 export const DepartmentsRouter = express.Router();
 

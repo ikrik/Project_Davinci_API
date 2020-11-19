@@ -1,10 +1,10 @@
-import ParisPoints from '../../data/ParisPoints/parisPoints';
-import CommunesParis from '../../data/CommunesParis/communesParis';
-import Departments from '../../data/Departments/departments';
-import France from '../../data/Country/france';
+import ParisPoints from '../../data/Points/parisPoints';
+import CommunesParis from '../../data/Communes/communesParis';
+import Departments from '../../data/Departments/franceDepartments';
+import France from '../../data/Regions/france';
 
 
-export const getParisPoints = async (): Promise<any> => {
+export const getPoints = async (): Promise<any> => {
   return new Promise((resolve, reject) => {
     if (!ParisPoints) {
       reject('No data found');
@@ -13,7 +13,7 @@ export const getParisPoints = async (): Promise<any> => {
   });
 };
 
-export const getCommunesParis = async (): Promise<any> => {
+export const getCommunes = async (): Promise<any> => {
   return new Promise((resolve, reject) => {
     if (!CommunesParis) {
       reject('No data found');
@@ -31,7 +31,7 @@ export const getDepartments = async (): Promise<any> => {
   });
 }
 
-export const getCountry = async (): Promise<any> => {
+export const getRegion = async (): Promise<any> => {
   return new Promise((resolve, reject) => {
     if (!France) {
       reject('No data found');
