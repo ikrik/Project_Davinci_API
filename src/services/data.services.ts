@@ -22,6 +22,12 @@ export const getCommunes = async (): Promise<any> => {
   });
 };
 
+export const getDepIdCommIdByCoordinates = async (): Promise<any> => {
+  return new Promise((resolve, reject) => {
+    resolve([{ id: 75056, "dept_id": 75 }]);
+  });
+};
+
 export const getDepartments = async (): Promise<any> => {
   return new Promise((resolve, reject) => {
     if (!Departments) {

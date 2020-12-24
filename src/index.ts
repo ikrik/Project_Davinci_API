@@ -1,4 +1,6 @@
 import * as dotenv from "dotenv";
+import https from "https";
+import fs from "fs";
 import express, { Request, Response, NextFunction } from "express";
 import cors from "cors";
 import helmet from "helmet";
@@ -24,7 +26,10 @@ const app = express();
 // App Configuration
 
 const corsOptions = {
-  origin: 'https://project-davinci.herokuapp.com'
+  origin: [
+    'https://project-davinci.herokuapp.com',
+    'https://localhost:4000'
+  ]
 };
 
 app.use(helmet());
@@ -42,9 +47,14 @@ app.use(NotFoundHandler);
 
 // Server Activation
 
-const server = app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
-});
+const server = https
+  .createServer({
+    key: fs.readFileSync('key.pem'),
+    cert: fs.readFileSync('cert.pem')
+  }, app)
+  .listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`);
+  });
 
 
 // Webpack HMR Activation //
