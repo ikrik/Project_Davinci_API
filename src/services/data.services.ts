@@ -24,7 +24,20 @@ export const getCommunes = async (): Promise<any> => {
 
 export const getDepIdCommIdByCoordinates = async (): Promise<any> => {
   return new Promise((resolve, reject) => {
-    resolve([{ id: 75056, "dept_id": 75 }]);
+    resolve([
+      {
+        id: 75056,
+        name:"Bouray-sur-Juine",
+        department: {
+          id: 75,
+          name: "Essonne",
+          region: {
+            id: 11,
+            name: "Île-de-France"
+          }
+        }
+      }
+    ]);
   });
 };
 
