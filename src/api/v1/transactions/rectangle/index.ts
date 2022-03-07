@@ -7,7 +7,7 @@ PointsRouter.get("/*", async (req: Request, res: Response) => {
   try {
     const data = await DataService.getPoints();
     res.status(200).send(data);
-  } catch (e) {
+  } catch (e: any) {
     res.status(404).send(e.message);
   }
 });

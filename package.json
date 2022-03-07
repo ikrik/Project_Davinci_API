@@ -1,36 +1,37 @@
 {
-  "name": "Project_DaVinci_Api",
+  "name": "project_davinci_api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "localStart": "PORT=4000 node dist/index.js",
     "start": "node dist/index.js",
     "webpack": "webpack --config ./config/webpack.config.dev.js",
     "build": "webpack --config ./config/webpack.config.prod.js"
   },
   "engines": {
-    "npm": "6.14.8",
-    "node": "v14.10.1"
+    "npm": "8.3.1",
+    "node": "v16.14.0"
   },
   "keywords": [],
-  "author": "",
+  "author": "Krik Tsakma",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "helmet": "^4.1.1"
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.7",
+    "@types/cors": "^2.8.12",
     "@types/dotenv": "^8.2.0",
-    "@types/express": "^4.17.8",
-    "@types/helmet": "0.0.48",
-    "@types/node": "^14.11.1",
-    "ts-loader": "^8.0.4",
-    "typescript": "^4.0.3",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-node-externals": "^2.5.2"
+    "@types/express": "^4.17.13",
+    "@types/helmet": "4.0.0",
+    "@types/node": "^17.0.21",
+    "ts-loader": "^9.2.7",
+    "typescript": "^4.6.2",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-node-externals": "^3.0.0"
   }
 }

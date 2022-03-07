@@ -7,7 +7,7 @@ DepartmentsRouter.get("/", async (req: Request, res: Response) => {
   try {
     const data = await DataService.getDepartments();
     res.status(200).send(data);
-  } catch (e) {
+  } catch (e: any) {
     res.status(404).send(e.message);
   }
 });

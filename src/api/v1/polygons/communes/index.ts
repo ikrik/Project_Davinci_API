@@ -8,7 +8,7 @@ CommunesRouter.get("/", async (req: Request, res: Response) => {
     const data = await DataService.getCommunes();
 
     res.status(200).send(data);
-  } catch (e) {
+  } catch (e: any) {
     res.status(404).send(e.message);
   }
 });

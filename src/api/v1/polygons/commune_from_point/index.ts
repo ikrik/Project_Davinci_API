@@ -8,7 +8,7 @@ CommuneFromPointRouter.get("/", async (req: Request, res: Response) => {
     const data = await DataService.getDepIdCommIdByCoordinates();
 
     res.status(200).send(data);
-  } catch (e) {
+  } catch (e: any) {
     res.status(404).send(e.message);
   }
 });
